@@ -14,4 +14,15 @@ router.get('/movies', (req, res) => {
         .catch((err) => console.log(err));
 });
 
+/* GET see-more page */
+router.get('/movies/:id', (req, res) => {
+    const { id } = req.params;
+
+    Movie.findById(id)
+        .then((data) => {
+            res.render('see-more', data)
+        })
+        .catch((err) => console.log(err));
+});
+
 module.exports = router;
