@@ -1,0 +1,8 @@
+<h1>Movies</h1>
+<div id="movies-div">
+    {{#each data}}
+    <p>{{title}}</p>
+    <img src="{{image}}">
+    <a href="/movies/{{_id}}">See more</a>
+    {{/each}}
+</div>
